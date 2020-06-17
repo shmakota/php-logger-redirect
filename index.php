@@ -12,6 +12,9 @@ $openDoc=fopen($document, "a");
 # GET REDIRECT LINK;
 $link = $_GET['link'];
 
+# GET TAG (NOT NEEDED);
+$tag = $_GET['tag'];
+
 # WRITE IP & DATE;
 fwrite($openDoc, $target);
 fwrite($openDoc, "\n");
@@ -20,6 +23,8 @@ fwrite($openDoc, "\n");
 fwrite($openDoc, date("h:i:s A"));
 fwrite($openDoc, "\n");
 fwrite($openDoc, $link);
+fwrite($openDoc, "\n");
+fwrite($openDoc, $tag);
 fwrite($openDoc, "\n");
 fwrite($openDoc, date("-----------"));
 fwrite($openDoc, "\n");
